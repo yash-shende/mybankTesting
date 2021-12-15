@@ -1,0 +1,68 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 57, Failures: 12, Errors: 0, Skipped: 0, Time elapsed: 160.55 s <<< FAILURE! - in TestSuite
+adminLoginTest(mybank.testcases.AdminPageDDTest)  Time elapsed: 0.28 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at mybank.testcases.AdminPageDDTest.adminLoginTest(AdminPageDDTest.java:48)
+
+userLoginTestWithcWrongData(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.449 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at mybank.testcases.DDUserLoginPageTest.userLoginTestWithcWrongData(DDUserLoginPageTest.java:72)
+
+userLoginTestWithcWrongEmail(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.368 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at mybank.testcases.DDUserLoginPageTest.userLoginTestWithcWrongEmail(DDUserLoginPageTest.java:89)
+
+userLoginTestWithcWrongEmail(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.345 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at mybank.testcases.DDUserLoginPageTest.userLoginTestWithcWrongEmail(DDUserLoginPageTest.java:89)
+
+userLoginTestWithcWrongPass(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.404 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at mybank.testcases.DDUserLoginPageTest.userLoginTestWithcWrongPass(DDUserLoginPageTest.java:106)
+
+userLoginTestWithcWrongPass(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.356 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at mybank.testcases.DDUserLoginPageTest.userLoginTestWithcWrongPass(DDUserLoginPageTest.java:106)
+
+userLoginTestSensitive(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.455 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at mybank.testcases.DDUserLoginPageTest.userLoginTestSensitive(DDUserLoginPageTest.java:122)
+
+userLoginTestSensitive(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.352 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at mybank.testcases.DDUserLoginPageTest.userLoginTestSensitive(DDUserLoginPageTest.java:122)
+
+TransactionRecordTest(mybank.testcases.TransactionRecordPageTest)  Time elapsed: 3.945 s  <<< FAILURE!
+java.lang.AssertionError: 
+The following asserts failed:
+	expected [true] but found [false],
+	expected [true] but found [false],
+	expected [true] but found [false],
+	expected [true] but found [false],
+	expected [true] but found [false],
+	expected [true] but found [false]
+	at mybank.testcases.TransactionRecordPageTest.TransactionRecordTest(TransactionRecordPageTest.java:84)
+
+Test3(mybank.testcases.WithdrawMoneyPageTest)  Time elapsed: 0.252 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at mybank.testcases.WithdrawMoneyPageTest.Test3(WithdrawMoneyPageTest.java:176)
+
+Test4(mybank.testcases.WithdrawMoneyPageTest)  Time elapsed: 0.249 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at mybank.testcases.WithdrawMoneyPageTest.Test4(WithdrawMoneyPageTest.java:213)
+
+contactUsTest(mybank.testcases.HomePageTest)  Time elapsed: 0.398 s  <<< FAILURE!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=96.0.4664.93)
+Build info: version: '4.0.0', revision: '3a21814679'
+System info: host: 'NGL001340', ip: '192.168.0.106', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_92'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3f6d50f4d80f17e1927284849c78c30b, clickElement {id=80f44ef7-5dc1-49ca-ade6-8d578505a35f}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.93, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\YASH_S~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51978}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51978/devtoo..., se:cdpVersion: 96.0.4664.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (3f6d50f4d80f17e1927284849c78c30b)] -> css selector: .col-sm-4:nth-child(1) > h3]
+Session ID: 3f6d50f4d80f17e1927284849c78c30b
+	at mybank.testcases.HomePageTest.contactUsTest(HomePageTest.java:299)
+

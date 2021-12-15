@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MultipleSuite">
+
+	<test name="AdminPageDDTest">
+		<classes>
+			<class name="mybank.testcases.AdminPageDDTest" />
+		</classes>
+	</test>
+	<test name="AdminRegisteredUsersPageTest">
+		<classes>
+			<class name="mybank.testcases.AdminRegisteredUsersPageTest" />
+		</classes>
+	</test>
+	<test name="ApproveMoneyToUserAccountPageTest">
+		<classes>
+			<class
+				name="mybank.testcases.ApproveMoneyToUserAccountPageTest" />
+		</classes>
+	</test>
+	<test name="ApproveWithdrawalOfMoneyPageTest">
+		<classes>
+			<class name="mybank.testcases.ApproveWithdrawalOfMoneyPageTest" />
+		</classes>
+	</test>
+	<test name="AdminAtmCardReqPageTest">
+		<classes>
+			<class name="mybank.testcases.AdminAtmCardReqPageTest" />
+		</classes>
+	</test>
+
+	
+	
+	
+	
+	<test name="UserLoginPageTest">
+		<classes>
+			<class name="mybank.testcases.UserLoginPageTest" />
+		</classes>
+	</test>
+	
+	<test name="RequestAtmPageTest">
+		<classes>
+			<class name="mybank.testcases.RequestAtmPageTest" />
+		</classes>
+	</test>
+	<test name="AddMoneyPageTest">
+		<classes>
+			<class name="mybank.testcases.AddMoneyPageTest" />
+		</classes>
+	</test>
+	<test name="AddBeneficiaryPageTest">
+		<classes>
+			<class name="mybank.testcases.AddBeneficiaryPageTest" />
+		</classes>
+	</test>
+	<test name="DDUserLoginPageTest">
+		<classes>
+			<class name="mybank.testcases.DDUserLoginPageTest" />
+		</classes>
+	</test>
+	<test name="PersonalDetailsPageTest">
+		<classes>
+			<class name="mybank.testcases.PersonalDetailsPageTest" />
+		</classes>
+	</test>
+	<test name="TransactionRecordPageTest">
+		<classes>
+			<class name="mybank.testcases.TransactionRecordPageTest" />
+		</classes>
+	</test>
+	<test name="WithdrawMoneyPageTest">
+		<classes>
+			<class name="mybank.testcases.WithdrawMoneyPageTest" />
+		</classes>
+	</test>
+	 
+	  
+	 
+	 
+	 
+	 <test name="HomePageTest">
+		<classes>
+			<class name="mybank.testcases.HomePageTest" />
+		</classes>
+	</test>
+
+	<test name="SignUpPageTest">
+		<classes>
+			<class name="mybank.testcases.SignUpPageTest" />
+		</classes>
+	</test>
+
+	<test name="SignUpPageValidationTest">
+		<classes>
+			<class name="mybank.testcases.SignUpPageValidationTest" />
+		</classes>
+	</test>
+	
+</suite>

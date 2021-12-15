@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [User Login Suite]">
+  <test thread-count="5" verbose="0" name="UserLoginPageTest(failed)">
+    <classes>
+      <class name="mybank.testcases.TransactionRecordPageTest">
+        <methods>
+          <include name="temp"/>
+          <include name="TransactionRecordTest"/>
+          <include name="tearDown"/>
+          <include name="tear"/>
+          <include name="beforeTest"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- mybank.testcases.TransactionRecordPageTest -->
+    </classes>
+  </test> <!-- UserLoginPageTest(failed) -->
+</suite> <!-- Failed suite [User Login Suite] -->

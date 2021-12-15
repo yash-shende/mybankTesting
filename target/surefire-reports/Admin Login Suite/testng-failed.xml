@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Admin Login Suite]">
+  <test thread-count="5" verbose="0" name="AdminPageDDTest(failed)">
+    <classes>
+      <class name="mybank.testcases.AdminPageDDTest">
+        <methods>
+          <include name="adminLoginTest" invocation-numbers="1"/>
+          <include name="tearDown"/>
+          <include name="temp"/>
+          <include name="beforeSuite"/>
+          <include name="quit"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- mybank.testcases.AdminPageDDTest -->
+    </classes>
+  </test> <!-- AdminPageDDTest(failed) -->
+</suite> <!-- Failed suite [Admin Login Suite] -->

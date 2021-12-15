@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [MultipleSuite]">
+  <test thread-count="5" verbose="0" name="AdminPageDDTest(failed)">
+    <classes>
+      <class name="mybank.testcases.AdminPageDDTest">
+        <methods>
+          <include name="adminLoginTest" invocation-numbers="1"/>
+          <include name="tearDown"/>
+          <include name="temp"/>
+          <include name="beforeSuite"/>
+          <include name="quit"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- mybank.testcases.AdminPageDDTest -->
+    </classes>
+  </test> <!-- AdminPageDDTest(failed) -->
+  <test thread-count="5" verbose="0" name="DDUserLoginPageTest(failed)">
+    <classes>
+      <class name="mybank.testcases.DDUserLoginPageTest">
+        <methods>
+          <include name="userLoginTestSensitive" invocation-numbers="0 1"/>
+          <include name="temp"/>
+          <include name="userLoginTestWithcWrongPass" invocation-numbers="0 1"/>
+          <include name="tearDown"/>
+          <include name="userLoginTestWithcWrongData" invocation-numbers="0"/>
+          <include name="setUp"/>
+          <include name="close"/>
+          <include name="userLoginTestWithcWrongEmail" invocation-numbers="0 1"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- mybank.testcases.DDUserLoginPageTest -->
+    </classes>
+  </test> <!-- DDUserLoginPageTest(failed) -->
+  <test thread-count="5" verbose="0" name="TransactionRecordPageTest(failed)">
+    <classes>
+      <class name="mybank.testcases.TransactionRecordPageTest">
+        <methods>
+          <include name="temp"/>
+          <include name="TransactionRecordTest"/>
+          <include name="tearDown"/>
+          <include name="tear"/>
+          <include name="beforeTest"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- mybank.testcases.TransactionRecordPageTest -->
+    </classes>
+  </test> <!-- TransactionRecordPageTest(failed) -->
+  <test thread-count="5" verbose="0" name="WithdrawMoneyPageTest(failed)">
+    <classes>
+      <class name="mybank.testcases.WithdrawMoneyPageTest">
+        <methods>
+          <include name="ShutDown"/>
+          <include name="temp"/>
+          <include name="tearDown"/>
+          <include name="Test3"/>
+          <include name="Test4"/>
+          <include name="beforeTest"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- mybank.testcases.WithdrawMoneyPageTest -->
+    </classes>
+  </test> <!-- WithdrawMoneyPageTest(failed) -->
+  <test thread-count="5" verbose="0" name="HomePageTest(failed)">
+    <classes>
+      <class name="mybank.testcases.HomePageTest">
+        <methods>
+          <include name="tear"/>
+          <include name="tearDown"/>
+          <include name="contactUsTest"/>
+          <include name="beforeSuite"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- mybank.testcases.HomePageTest -->
+    </classes>
+  </test> <!-- HomePageTest(failed) -->
+</suite> <!-- Failed suite [MultipleSuite] -->

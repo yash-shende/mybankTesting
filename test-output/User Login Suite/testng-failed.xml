@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [User Login Suite]">
+  <test name="UserLoginPageTest(failed)">
+    <classes>
+      <class name="mybank.testcases.TransactionRecordPageTest">
+        <methods>
+          <include name="temp"/>
+          <include name="TransactionRecordTest"/>
+          <include name="tearDown"/>
+          <include name="tear"/>
+          <include name="beforeTest"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- mybank.testcases.TransactionRecordPageTest -->
+      <class name="mybank.testcases.DDUserLoginPageTest">
+        <methods>
+          <include name="userLoginTestSensitive" invocation-numbers="0 1"/>
+          <include name="temp"/>
+          <include name="userLoginTestWithcWrongPass" invocation-numbers="0 1"/>
+          <include name="tearDown"/>
+          <include name="userLoginTestWithcWrongData" invocation-numbers="0"/>
+          <include name="setUp"/>
+          <include name="close"/>
+          <include name="userLoginTestWithcWrongEmail" invocation-numbers="0 1"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- mybank.testcases.DDUserLoginPageTest -->
+      <class name="mybank.testcases.WithdrawMoneyPageTest">
+        <methods>
+          <include name="ShutDown"/>
+          <include name="temp"/>
+          <include name="tearDown"/>
+          <include name="Test3"/>
+          <include name="Test4"/>
+          <include name="beforeTest"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- mybank.testcases.WithdrawMoneyPageTest -->
+    </classes>
+  </test> <!-- UserLoginPageTest(failed) -->
+</suite> <!-- Failed suite [User Login Suite] -->
