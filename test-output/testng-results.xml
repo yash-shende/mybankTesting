@@ -1,59 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="19531" started-at="2021-12-15T11:01:52Z" finished-at="2021-12-15T11:02:11Z">
+  <suite name="Default suite" duration-ms="6737" started-at="2021-12-16T11:20:19Z" finished-at="2021-12-16T11:20:26Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="19531" started-at="2021-12-15T11:01:52Z" finished-at="2021-12-15T11:02:11Z">
-      <class name="mybank.testcases.AddBeneficiaryPageTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:mybank.testcases.AddBeneficiaryPageTest@76f2b07d]" name="setup" is-config="true" duration-ms="180" started-at="2021-12-15T16:31:52Z" finished-at="2021-12-15T16:31:52Z">
+    <test name="Default test" duration-ms="6737" started-at="2021-12-16T11:20:19Z" finished-at="2021-12-16T11:20:26Z">
+      <class name="mybank.testcases.UserLoginPageTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:mybank.testcases.UserLoginPageTest@e320068]" name="setup" is-config="true" duration-ms="133" started-at="2021-12-16T16:50:19Z" finished-at="2021-12-16T16:50:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:mybank.testcases.AddBeneficiaryPageTest@76f2b07d]" name="beforeTest" is-config="true" duration-ms="5733" started-at="2021-12-15T16:31:52Z" finished-at="2021-12-15T16:31:58Z">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:mybank.testcases.UserLoginPageTest@e320068]" name="beforeSuite" is-config="true" duration-ms="4476" started-at="2021-12-16T16:50:19Z" finished-at="2021-12-16T16:50:24Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="addBeneficiaryTest()[pri:1, instance:mybank.testcases.AddBeneficiaryPageTest@76f2b07d]" name="addBeneficiaryTest" duration-ms="10458" started-at="2021-12-15T16:31:58Z" finished-at="2021-12-15T16:32:08Z">
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="LoginTest()[pri:0, instance:mybank.testcases.UserLoginPageTest@e320068]" name="LoginTest" duration-ms="880" started-at="2021-12-16T16:50:24Z" finished-at="2021-12-16T16:50:25Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addBeneficiaryTest -->
-        <test-method status="PASS" signature="temp(org.testng.ITestResult)[pri:0, instance:mybank.testcases.AddBeneficiaryPageTest@76f2b07d]" name="temp" is-config="true" duration-ms="1" started-at="2021-12-15T16:32:08Z" finished-at="2021-12-15T16:32:08Z">
+        </test-method> <!-- LoginTest -->
+        <test-method status="PASS" signature="temp(org.testng.ITestResult)[pri:0, instance:mybank.testcases.UserLoginPageTest@e320068]" name="temp" is-config="true" duration-ms="1" started-at="2021-12-16T16:50:25Z" finished-at="2021-12-16T16:50:25Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addBeneficiaryTest status=SUCCESS method=AddBeneficiaryPageTest.addBeneficiaryTest()[pri:1, instance:mybank.testcases.AddBeneficiaryPageTest@76f2b07d] output={null}]]]>
+                <![CDATA[[TestResult name=LoginTest status=SUCCESS method=UserLoginPageTest.LoginTest()[pri:0, instance:mybank.testcases.UserLoginPageTest@e320068] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- temp -->
-        <test-method status="PASS" signature="invalidCredentialsTest()[pri:2, instance:mybank.testcases.AddBeneficiaryPageTest@76f2b07d]" name="invalidCredentialsTest" duration-ms="1148" started-at="2021-12-15T16:32:08Z" finished-at="2021-12-15T16:32:09Z">
+        <test-method status="PASS" signature="tear()[pri:0, instance:mybank.testcases.UserLoginPageTest@e320068]" name="tear" is-config="true" duration-ms="1361" started-at="2021-12-16T16:50:25Z" finished-at="2021-12-16T16:50:26Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- invalidCredentialsTest -->
-        <test-method status="PASS" signature="temp(org.testng.ITestResult)[pri:0, instance:mybank.testcases.AddBeneficiaryPageTest@76f2b07d]" name="temp" is-config="true" duration-ms="0" started-at="2021-12-15T16:32:09Z" finished-at="2021-12-15T16:32:09Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=invalidCredentialsTest status=SUCCESS method=AddBeneficiaryPageTest.invalidCredentialsTest()[pri:2, instance:mybank.testcases.AddBeneficiaryPageTest@76f2b07d] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- temp -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:mybank.testcases.AddBeneficiaryPageTest@76f2b07d]" name="afterTest" is-config="true" duration-ms="2163" started-at="2021-12-15T16:32:09Z" finished-at="2021-12-15T16:32:11Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:mybank.testcases.AddBeneficiaryPageTest@76f2b07d]" name="tearDown" is-config="true" duration-ms="405" started-at="2021-12-15T16:32:11Z" finished-at="2021-12-15T16:32:12Z">
+        </test-method> <!-- tear -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:mybank.testcases.UserLoginPageTest@e320068]" name="tearDown" is-config="true" duration-ms="268" started-at="2021-12-16T16:50:26Z" finished-at="2021-12-16T16:50:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- mybank.testcases.AddBeneficiaryPageTest -->
+      </class> <!-- mybank.testcases.UserLoginPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
