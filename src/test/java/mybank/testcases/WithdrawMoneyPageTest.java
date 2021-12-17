@@ -20,6 +20,7 @@ import mybank.pages.SideNavBar;
 import mybank.pages.WithdrawMoneyPage;
 import mybank.pages.AccSummSideNavBar;
 import mybank.utility.BaseTest;
+import mybank.utility.UserData;
 import mybank.utility.Utilities;
 
 public class WithdrawMoneyPageTest extends BaseTest {
@@ -27,6 +28,7 @@ public class WithdrawMoneyPageTest extends BaseTest {
 	static Utilities utils = new Utilities();
 	Logger logger = utils.log4jSetup(this.getClass().getName());
 	boolean logined;
+	String amt;
 
 	@BeforeTest
 	public void beforeTest() {
@@ -36,14 +38,14 @@ public class WithdrawMoneyPageTest extends BaseTest {
 		logger.warn("Browser just launched !");
 	}
  
-	@Test(priority = 1)
-	public void requestAtmPageAvabilityTest() {
+	@Test(priority = 1,dataProvider = "Dataset", dataProviderClass = UserData.class)
+	public void requestAtmPageAvabilityTest(String emailid, String password) {
 		test = extent.createTest("withdraw Money Page Test", "Testing withdraw Money Feature ");
 		test.info("Browser launched successfully");
 
 		WithdrawMoneyPage withdrawMoneyPage = new WithdrawMoneyPage(driver);
 
-		logined = utils.userLogin("abc@gmail.com", "1234");
+		logined = utils.userLogin(emailid,password);
 
 		if (logined) {
 			String actualUrl = driver.getCurrentUrl();
@@ -115,7 +117,9 @@ public class WithdrawMoneyPageTest extends BaseTest {
 
 			WebElement amount = driver.findElement(By.xpath("//input[@placeholder='Enter Amount']"));
 
-			amount.sendKeys("93,000");
+			
+			amt = String.valueOf(41000 + (int)(Math.random() * ((50000 - 41000) + 1)));
+			amount.sendKeys(amt);
 
 			withdrawMoneyPage.clickwithdrawMoneyBtn();
 
@@ -155,7 +159,8 @@ public class WithdrawMoneyPageTest extends BaseTest {
 
 			WebElement amount = driver.findElement(By.xpath("//input[@placeholder='Enter Amount']"));
 
-			amount.sendKeys("30");
+			amt = String.valueOf(411000 + (int)(Math.random() * ((510000 - 411000) + 1)));
+			amount.sendKeys(amt);
 
 			withdrawMoneyPage.clickwithdrawMoneyBtn();
 
@@ -192,7 +197,8 @@ public class WithdrawMoneyPageTest extends BaseTest {
 
 			WebElement amount = driver.findElement(By.xpath("//input[@placeholder='Enter Amount']"));
 
-			amount.sendKeys("30");
+			amt = String.valueOf(100 + (int)(Math.random() * ((40000 - 100) + 1)));
+			amount.sendKeys(amt);
 
 			withdrawMoneyPage.clickwithdrawMoneyBtn();
 
@@ -231,7 +237,8 @@ public class WithdrawMoneyPageTest extends BaseTest {
 
 			WebElement amount = driver.findElement(By.xpath("//input[@placeholder='Enter Amount']"));
 
-			amount.sendKeys("3,00");
+			amt = String.valueOf(100 + (int)(Math.random() * ((40000 - 100) + 1)));
+			amount.sendKeys(amt);
 
 			withdrawMoneyPage.clickwithdrawMoneyBtn();
 

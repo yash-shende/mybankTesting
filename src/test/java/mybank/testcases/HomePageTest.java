@@ -3,12 +3,16 @@ package mybank.testcases;
 import static org.testng.Assert.assertEquals;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -19,15 +23,15 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 
+import mybank.pages.HomePage;
 import mybank.pages.HomePageNavBar;
 import mybank.utility.*;
 
 public class HomePageTest extends BaseTest {
 	static WebDriver driver = null;
 	static Utilities utils = new Utilities();
-	// Logger logger = utils.log4jSetup(this.getClass().getName());
 	Logger logger = utils.log4jSetup(this.getClass().getName());
-
+	
 	@BeforeTest
 	public void beforeSuite() {
 		
@@ -293,18 +297,29 @@ public class HomePageTest extends BaseTest {
 	public void contactUsTest() {
 		test = extent.createTest("Testing Contact Us Button ", "Testing the Home page UI elements ");
 		test.log(Status.INFO,"Testing Contact Us Button ");
-
+		HomePage homePage = new HomePage(driver);
 		driver.get("http://localhost/mybank/homepage.php");
 		driver.manage().window().setSize(new Dimension(1295, 695));
 
-		// used js executor to scroll down
-		JavascriptExecutor js = ((JavascriptExecutor) driver);
-		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-		driver.findElement(By.id("bottom-ContactUs-btn")).click();
-		driver.findElement(By.cssSelector(".col-sm-4:nth-child(1) > h3")).click();
-		String contact = driver.findElement(By.cssSelector(".col-sm-4:nth-child(1) > h3")).getText();
-		String ex = "Kolkata Branch";
-		if (contact.contains(ex)) {
+		// used js executor to scroll down		
+		
+		JavascriptExecutor js= ((JavascriptExecutor)driver);
+		
+		WebElement contactUsBtn= driver.findElement(homePage.bottomContactUsBtn);
+		
+		//Selenium 4 object locator feature to get X,Y position of Element
+		js.executeScript("window.scrollBy("+contactUsBtn.getRect().getX()+","+contactUsBtn.getRect().getY()+")");
+		
+		homePage.clickbottomContactUsBtn();	
+		
+		
+		//Wait till title of Branches load 
+		WebDriverWait wait=new WebDriverWait(driver, 20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(homePage.BranchTitle));
+		String contact = homePage.getBranchTitle();
+				
+		String ex ="Kolkata Branch";
+		if (contact.equalsIgnoreCase(ex)) {
 			test.pass("ContactPage Visible ");
 			logger.info("ContactPage Visible ");
 		} else {

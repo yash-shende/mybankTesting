@@ -19,6 +19,7 @@ import com.aventstack.extentreports.MediaEntityBuilder;
 import mybank.pages.AdminLoginPage;
 import mybank.pages.AdminRegisteredUsersPage;
 import mybank.pages.AdminSideNavBar;
+import mybank.utility.AdminData;
 //import mybank.testcases.AdminPageDDTest;
 import mybank.utility.BaseTest;
 import mybank.utility.Utilities;
@@ -38,12 +39,12 @@ public class AdminRegisteredUsersPageTest extends BaseTest {
 		logger.warn("Browser just launched !");
 	}
 
-	@Test
-	public void registeredUserPageAvabilityTest() {
+	@Test(dataProvider = "Dataset", dataProviderClass = AdminData.class)
+	public void registeredUserPageAvabilityTest(String emailid, String password) {
 		AdminSideNavBar adminsideBar = new AdminSideNavBar(driver);
 		AdminRegisteredUsersPage changeUserStatusPage = new AdminRegisteredUsersPage(driver);
 
-		boolean logined = utils.AdminLogin("admin@gmail.com", "admin123");
+		boolean logined = utils.AdminLogin(emailid,password);
 		if(logined) {
 		adminsideBar.RegisteredUserBtn();
 

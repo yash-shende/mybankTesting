@@ -22,6 +22,7 @@ import mybank.pages.SideNavBar;
 import mybank.pages.AddMoneyPage;
 import mybank.pages.AccSummSideNavBar;
 import mybank.utility.BaseTest;
+import mybank.utility.UserData;
 import mybank.utility.Utilities;
 
 public class AddMoneyPageTest extends BaseTest {
@@ -29,7 +30,7 @@ public class AddMoneyPageTest extends BaseTest {
 	static Utilities utils = new Utilities();
 	static Logger logger = utils.log4jSetup(UserLoginPageTest.class.getName());
 	boolean logined ;
-
+	String amt ;
 	@BeforeTest 
 	public void beforeTest() {
 
@@ -38,12 +39,12 @@ public class AddMoneyPageTest extends BaseTest {
 		logger.warn("Browser just launched !");
 	}
 
-	@Test(priority = 1)
-	public void addMoneyPageAvabilityTest() {
+	@Test(priority = 1,dataProvider = "Dataset", dataProviderClass = UserData.class)
+	public void addMoneyPageAvabilityTest(String emailid, String password) {
 		test = extent.createTest("Add Money Page Test", "Testing Add Money Feature ");
 		test.info("Browser launched successfully");
 
-		logined = utils.userLogin("abc@gmail.com", "1234");
+		logined = utils.userLogin(emailid,password);
 
 		if (logined) {
 			String actualUrl = driver.getCurrentUrl();
@@ -102,8 +103,9 @@ public class AddMoneyPageTest extends BaseTest {
 
 	}
 
-	@Test(priority = 2)
-	public void test2() {
+	@Test(priority = 2,dataProvider = "Dataset", dataProviderClass = UserData.class)
+	public void test2(String emailid, String password) {
+		
 		test = extent.createTest("Veryfing Add Money feature above given Limit ", "Testing Add Money Feature ");
 		AddMoneyPage addMoneyPage = new AddMoneyPage(driver);
 		
@@ -114,7 +116,8 @@ public class AddMoneyPageTest extends BaseTest {
 
 		WebElement amount = driver.findElement(By.className("form-control"));
 
-		amount.sendKeys("59999999999");
+		amt = String.valueOf(41000 + (int)(Math.random() * ((50000 - 41000) + 1)));
+		amount.sendKeys(amt);
 
 		addMoneyPage.clickaddMoneyBtn();
 
@@ -147,8 +150,8 @@ public class AddMoneyPageTest extends BaseTest {
 		}
 	}
 
-	@Test(priority = 3)
-	public void test3() {
+	@Test(priority = 3,dataProvider = "Dataset", dataProviderClass = UserData.class)
+	public void test3(String emailid, String password) {
 		test = extent.createTest("Veryfing Add Money feature within a given Limit ", "Testing Add Money Feature ");
 		AddMoneyPage addMoneyPage = new AddMoneyPage(driver);
 		if(logined) {
@@ -157,8 +160,9 @@ public class AddMoneyPageTest extends BaseTest {
 		addMoneyPage.clickenterAmount();
 
 		WebElement amount = driver.findElement(By.className("form-control"));
-
-		amount.sendKeys("6000");
+		
+		amt = String.valueOf(100 + (int)(Math.random() * ((40000 - 100) + 1)));
+		amount.sendKeys(amt);
 
 		addMoneyPage.clickaddMoneyBtn();
 
@@ -190,8 +194,8 @@ public class AddMoneyPageTest extends BaseTest {
 		}
 	}
 
-	@Test(priority = 4)
-	public void test4() {
+	@Test(priority = 4,dataProvider = "Dataset", dataProviderClass = UserData.class)
+	public void test4(String emailid, String password) {
 		test = extent.createTest("Test to Check user already requested for adding money !", "Testing Add Money Feature ");
 		
 		AddMoneyPage addMoneyPage = new AddMoneyPage(driver);
@@ -202,8 +206,9 @@ public class AddMoneyPageTest extends BaseTest {
 		addMoneyPage.clickenterAmount();
 
 		WebElement amount = driver.findElement(By.className("form-control"));
-
-		amount.sendKeys("999");
+		
+		amt = String.valueOf(100 + (int)(Math.random() * ((40000 - 100) + 1)));
+		amount.sendKeys(amt);
 
 		addMoneyPage.clickaddMoneyBtn();
 

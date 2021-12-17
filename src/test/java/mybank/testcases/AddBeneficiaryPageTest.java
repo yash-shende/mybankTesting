@@ -19,6 +19,7 @@ import com.opencsv.CSVReader;
 import mybank.pages.AddBeneficiaryPage;
 import mybank.pages.SideNavBar;
 import mybank.utility.BaseTest;
+import mybank.utility.UserData;
 import mybank.utility.Utilities;
 
 public class AddBeneficiaryPageTest extends BaseTest {
@@ -35,8 +36,8 @@ public class AddBeneficiaryPageTest extends BaseTest {
 		logger.info("Browser Launched Successfully");
 	}
 
-	@Test(priority = 1)
-	public void addBeneficiaryTest() throws IOException, InterruptedException {
+	@Test(priority = 1,dataProvider = "Dataset", dataProviderClass = UserData.class)
+	public void addBeneficiaryTest(String emailid, String password) throws IOException {
 		test = extent.createTest("Add Beneficiary Page Test", "Testing Adding Beneficiary Feature ");
 		test.info("Browser launched successfully");
  
@@ -46,7 +47,7 @@ public class AddBeneficiaryPageTest extends BaseTest {
 
 		ArrayList<String[]> rows = utils.CSVReader("beneficiary.csv");
 
-		boolean logined = utils.userLogin("abc@gmail.com", "1234");
+		boolean logined = utils.userLogin(emailid,password);
 		if (logined) {
 
 			sideBar.clickAddBeneficiary();
@@ -58,7 +59,6 @@ public class AddBeneficiaryPageTest extends BaseTest {
 				addBeneficiaryPage.enterBranchName(row[3]);
 				addBeneficiaryPage.enterIfsc(row[4]);
 				addBeneficiaryPage.clickAddBeneficiaryBtn();
-				Thread.sleep(4000);
 				String expectedStatusMsg = "Beneficiary added successfully!!";
 				String actualStatusMsg = addBeneficiaryPage.getStatusMsg();
 				System.out.println(actualStatusMsg);
@@ -81,18 +81,19 @@ public class AddBeneficiaryPageTest extends BaseTest {
 
 	}
 
-	@Test(priority = 2)
-	public void invalidCredentialsTest() throws IOException {
+	@Test(priority = 2,dataProvider = "Dataset", dataProviderClass = UserData.class)
+	public void invalidCredentialsTest(String emailid, String password) throws IOException {
 
 		AddBeneficiaryPage addBeneficiaryPage = new AddBeneficiaryPage(driver);
 		SideNavBar sideBar = new SideNavBar(driver);
 
-		test = extent.createTest("Invalid Credentials Test",
+		test = extent.createTest("add Beneficiary Invalid Credentials Test",
 				"Testing Adding Beneficiary button is disabled on entering Invalid account number ");
 		test.info("Browser launched successfully");
+		
 		String invalidAccNumber = "78906543214";
 
-		boolean logined = utils.userLogin("abc@gmail.com", "1234");
+		boolean logined = utils.userLogin(emailid,password);
 
 		if (logined) {
 			sideBar.clickAddBeneficiary();

@@ -19,7 +19,7 @@ import com.aventstack.extentreports.MediaEntityBuilder;
 
 import mybank.pages.AdminSideNavBar;
 import mybank.pages.ApproveWithdrawalOfMoneyPage;
-
+import mybank.utility.AdminData;
 import mybank.utility.BaseTest;
 import mybank.utility.Utilities;
 
@@ -41,13 +41,13 @@ public class ApproveWithdrawalOfMoneyPageTest extends BaseTest {
 		logger.warn("Browser just launched !");
 	}
 
-	@Test
-	public void approveWithdrawalOfMoneyPageAvabilityTest() {
+	@Test(dataProvider = "Dataset", dataProviderClass = AdminData.class)
+	public void approveWithdrawalOfMoneyPageAvabilityTest(String emailid, String password) {
 
 		AdminSideNavBar adminsideBar = new AdminSideNavBar(driver);
 		ApproveWithdrawalOfMoneyPage approveWithdrawalOfMoneyPage = new ApproveWithdrawalOfMoneyPage(driver);
 		SoftAssert soft = new SoftAssert();
-		boolean logined = utils.AdminLogin("admin@gmail.com", "admin123");
+		boolean logined = utils.AdminLogin(emailid,password);
 
 		if (logined) {
 			adminsideBar.approveWithdrawalBtn();

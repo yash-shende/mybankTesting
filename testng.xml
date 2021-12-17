@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="MultipleSuite">
+<suite name="MybankTestSuite">
+
+	<test name="UserLoginPageTest">
+		<classes>
+			<class name="mybank.testcases.UserLoginPageTest" />
+		</classes>
+	</test>
+	<test name="RequestAtmPageTest">
+		<classes>
+			<class name="mybank.testcases.RequestAtmPageTest" />
+		</classes>
+	</test>
+	
 
 	<test name="AdminPageDDTest">
 		<classes>
@@ -29,21 +41,13 @@
 		</classes>
 	</test>
 
-	
-	
-	
-	
-	<test name="UserLoginPageTest">
-		<classes>
-			<class name="mybank.testcases.UserLoginPageTest" />
-		</classes>
-	</test>
-	
-	<test name="RequestAtmPageTest">
-		<classes>
-			<class name="mybank.testcases.RequestAtmPageTest" />
-		</classes>
-	</test>
+
+
+
+
+
+
+
 	<test name="AddMoneyPageTest">
 		<classes>
 			<class name="mybank.testcases.AddMoneyPageTest" />
@@ -74,16 +78,11 @@
 			<class name="mybank.testcases.WithdrawMoneyPageTest" />
 		</classes>
 	</test>
-	 
-	  
-	 
-	 
-	 
-	 <test name="HomePageTest">
-		<classes>
-			<class name="mybank.testcases.HomePageTest" />
-		</classes>
-	</test>
+
+
+
+
+
 
 	<test name="SignUpPageTest">
 		<classes>
@@ -96,5 +95,10 @@
 			<class name="mybank.testcases.SignUpPageValidationTest" />
 		</classes>
 	</test>
-	
+	<test name="HomePageTest">
+		<classes>
+			<class name="mybank.testcases.HomePageTest" />
+		</classes>
+	</test>
+
 </suite>

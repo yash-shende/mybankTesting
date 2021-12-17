@@ -1,19 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [MybankTestSuite]">
+  <test name="DDUserLoginPageTest(failed)">
     <classes>
-      <class name="mybank.testcases.AddMoneyPageTest">
+      <class name="mybank.testcases.DDUserLoginPageTest">
         <methods>
+          <include name="userLoginTestSensitive" invocation-numbers="0 1 2 4 5 6 7"/>
           <include name="temp"/>
-          <include name="beforeTest"/>
+          <include name="userLoginTestWithcWrongPass" invocation-numbers="0 1 2 3 4 5 6 7"/>
           <include name="tearDown"/>
-          <include name="test2"/>
-          <include name="ShutDown"/>
-          <include name="test3"/>
+          <include name="userLoginTestWithcWrongData" invocation-numbers="0 1 2 3 4 5 6"/>
+          <include name="setUp"/>
+          <include name="close"/>
+          <include name="userLoginTestWithcWrongEmail" invocation-numbers="0 1 2 3 4 5 6 7"/>
+          <include name="userLoginTestWithcorrectData" invocation-numbers="2 6 7"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- mybank.testcases.AddMoneyPageTest -->
+      </class> <!-- mybank.testcases.DDUserLoginPageTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- DDUserLoginPageTest(failed) -->
+  <test name="PersonalDetailsPageTest(failed)">
+    <classes>
+      <class name="mybank.testcases.PersonalDetailsPageTest">
+        <methods>
+          <include name="tear"/>
+          <include name="tearDown"/>
+          <include name="temp"/>
+          <include name="personalDetailsTest"/>
+          <include name="setup"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- mybank.testcases.PersonalDetailsPageTest -->
+    </classes>
+  </test> <!-- PersonalDetailsPageTest(failed) -->
+  <test name="TransactionRecordPageTest(failed)">
+    <classes>
+      <class name="mybank.testcases.TransactionRecordPageTest">
+        <methods>
+          <include name="temp"/>
+          <include name="TransactionRecordTest"/>
+          <include name="tearDown"/>
+          <include name="tear"/>
+          <include name="beforeTest"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- mybank.testcases.TransactionRecordPageTest -->
+    </classes>
+  </test> <!-- TransactionRecordPageTest(failed) -->
+  <test name="WithdrawMoneyPageTest(failed)">
+    <classes>
+      <class name="mybank.testcases.WithdrawMoneyPageTest">
+        <methods>
+          <include name="ShutDown"/>
+          <include name="temp"/>
+          <include name="tearDown"/>
+          <include name="Test3"/>
+          <include name="beforeTest"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- mybank.testcases.WithdrawMoneyPageTest -->
+    </classes>
+  </test> <!-- WithdrawMoneyPageTest(failed) -->
+  <test name="SignUpPageValidationTest(failed)">
+    <classes>
+      <class name="mybank.testcases.SignUpPageValidationTest">
+        <methods>
+          <include name="tear"/>
+          <include name="SignUpWithInvalidEmailId"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="temp"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- mybank.testcases.SignUpPageValidationTest -->
+    </classes>
+  </test> <!-- SignUpPageValidationTest(failed) -->
+</suite> <!-- Failed suite [MybankTestSuite] -->

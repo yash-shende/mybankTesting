@@ -11,15 +11,15 @@ public class SignUpPage {
 	WebDriver driver = null;
 	
 	
-	By FirstName = By.name("firstname");
-	By LastName = RelativeLocator.with(By.tagName("input")).below(FirstName);
-	By BankAcc = By.name("acNo");
-	By Email =  RelativeLocator.with(By.tagName("input")).above(BankAcc);
-	By Password = By.name("pwd");
-	By RePass = By.name("repwd"); 
+	public By FirstName = By.name("firstname");
+	public By LastName = RelativeLocator.with(By.tagName("input")).below(FirstName);
+	public By BankAcc = By.name("acNo");
+	public By Email =  RelativeLocator.with(By.tagName("input")).above(BankAcc);
+	public By Password = By.name("pwd");
+	public By RePass = By.name("repwd"); 
 	By DateOB = By.name("DOB");
 	By Gender = RelativeLocator.with(By.tagName("select")).above(DateOB);
-	By Country = RelativeLocator.with(By.tagName("input")).below(DateOB);
+	public By Country = RelativeLocator.with(By.tagName("input")).below(DateOB);
 	public By Submit = By.name("submit");
 	By loginBtn = By.partialLinkText("Login");
 	

@@ -4,7 +4,6 @@ import java.io.IOException;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
@@ -31,10 +30,10 @@ public class UserLoginPageTest extends BaseTest {
 		logger.warn("Browser just launched !");
 	}
 
-	@Test
-	public static void LoginTest() {
+	@Test(dataProvider = "Dataset", dataProviderClass = UserData.class)
+	public static void LoginTest(String emailid, String password) {
 
-		utils.userLogin("abc@gmail.com", "1234"); 
+		utils.userLogin(emailid, password); 
 		
 	}
 	

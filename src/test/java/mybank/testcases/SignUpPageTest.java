@@ -52,6 +52,14 @@ public class SignUpPageTest extends BaseTest {
 
 		for (String[] row : rows) {  //ForEach loop to access all rows of the Sign CSV file 
 
+			driver.findElement(signup.FirstName).clear();
+			driver.findElement(signup.LastName).clear();
+			driver.findElement(signup.Email).clear();
+			driver.findElement(signup.BankAcc).clear();
+			driver.findElement(signup.Password).clear();
+			driver.findElement(signup.RePass).clear();
+			driver.findElement(signup.Country).clear();
+			
 			String CustomerFirstName = row[0];
 			String CustomerLastName = row[1];
 			String CustomerEmail = row[2];

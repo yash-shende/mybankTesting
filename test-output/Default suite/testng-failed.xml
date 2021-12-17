@@ -3,17 +3,16 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="mybank.testcases.AddMoneyPageTest">
+      <class name="mybank.testcases.WithdrawMoneyPageTest">
         <methods>
-          <include name="temp"/>
-          <include name="beforeTest"/>
-          <include name="tearDown"/>
-          <include name="test2"/>
           <include name="ShutDown"/>
-          <include name="test3"/>
+          <include name="temp"/>
+          <include name="tearDown"/>
+          <include name="Test3"/>
+          <include name="beforeTest"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- mybank.testcases.AddMoneyPageTest -->
+      </class> <!-- mybank.testcases.WithdrawMoneyPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

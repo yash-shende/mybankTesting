@@ -2,6 +2,7 @@ package mybank.testcases;
 
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 import java.io.IOException;
 
@@ -9,6 +10,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
@@ -21,6 +23,7 @@ import bsh.This;
 import mybank.pages.AdminSideNavBar;
 import mybank.pages.ApproveMoneyToUserAccountPage;
 import mybank.utility.BaseTest;
+import mybank.utility.AdminData;
 import mybank.utility.Utilities;
 
 public class ApproveMoneyToUserAccountPageTest extends BaseTest {
@@ -39,13 +42,13 @@ public class ApproveMoneyToUserAccountPageTest extends BaseTest {
 		logger.warn("Browser just launched !");
 	}
 			
-    @Test()
-	public void approveMoneyToUserAccountPageAvabilityTest() {
+    @Test(dataProvider = "Dataset", dataProviderClass = AdminData.class)
+	public void approveMoneyToUserAccountPageAvabilityTest(String emailid, String password) {
 		
 		AdminSideNavBar adminsideBar = new AdminSideNavBar(driver);
 		ApproveMoneyToUserAccountPage approveMoneyToUserAccountPage = new ApproveMoneyToUserAccountPage(driver);
          
-		boolean logined = utils.AdminLogin("admin@gmail.com", "admin123");
+		boolean logined = utils.AdminLogin(emailid,password);
 		
 		if(logined) {
 		
@@ -67,52 +70,35 @@ public class ApproveMoneyToUserAccountPageTest extends BaseTest {
 		}
 		
 		
-		String str1 = "";
-        try {
-
-		str1 = approveMoneyToUserAccountPage.getnoReqstatus();
-
-		}
-		catch(Exception e)
-		{
-
-		System.out.println("exception is : "+ e);
-		}
-        
-        if (str1.equals("No requests yet!!")) {
-
-        	test.pass("No approve money req yet ");
-        	logger.info("No approve money req yet ");
-
-        	}
-
-
-        	else
-        	{
-		// text area 
-	            String customerCode = 	approveMoneyToUserAccountPage.getcustomerCodeNo();
-				approveMoneyToUserAccountPage.clickenterCodeNo();
-				
-				WebElement amount = driver.findElement(By.xpath("//body[1]/div[1]/div[1]/form[1]/input[1]"));
-				
-				//input[@placeholder='Enter Amount']
-				amount.sendKeys(customerCode);
-				
-		     	// click the approve button
-				approveMoneyToUserAccountPage.clickaapproveMoneyToUserAcBtn();
-				test.pass("Approve Money to User account!");
-				logger.info("Approve Money to User account!");
-				driver.switchTo().alert().accept();
-				System.out.println("alert");
-				
-                if (approveMoneyToUserAccountPage.getapproveMnyStatusMessage() == "")
-					System.out.println("You Clicked on cancle");
-				else {
-					logger.info("Alert Message is Clicked OK !");
-					test.pass("Approve Money to User account is Successfull !");
-					logger.info("Approve Money to User account is Successfull!!");			
-				}
-        	}
+		int Element1 = approveMoneyToUserAccountPage.findTableElements();
+		if (Element1 == 1) {
+			test.warning("No Add Money Requeste available ! ");
+			logger.error("No Add Money Requeste available ! ");
+		}else {
+			String customerCode = 	approveMoneyToUserAccountPage.getcustomerCodeNo();
+			approveMoneyToUserAccountPage.clickenterCodeNo();
+			
+			WebElement amount = driver.findElement(By.xpath("//body[1]/div[1]/div[1]/form[1]/input[1]"));
+			
+			//input[@placeholder='Enter Amount']
+			amount.sendKeys(customerCode);
+			
+	     	// click the approve button
+			approveMoneyToUserAccountPage.clickaapproveMoneyToUserAcBtn();
+			test.pass("Approve Money to User account!");
+			logger.info("Approve Money to User account!");
+			driver.switchTo().alert().accept();
+			System.out.println("alert");
+			
+            if (approveMoneyToUserAccountPage.getapproveMnyStatusMessage() == "")
+				System.out.println("You Clicked on cancle");
+			else {
+				logger.info("Alert Message is Clicked OK !");
+				test.pass("Approve Money to User account is Successfull !");
+				logger.info("Approve Money to User account is Successfull!!");			
+			}
+		}        
+        	
 		}
 		}
     @AfterMethod

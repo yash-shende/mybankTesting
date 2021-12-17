@@ -17,7 +17,9 @@ import com.aventstack.extentreports.MediaEntityBuilder;
 
 import mybank.pages.AdminAtmCardReqPage;
 import mybank.pages.SideNavBar;
+import mybank.utility.AdminData;
 import mybank.utility.BaseTest;
+import mybank.utility.UserData;
 import mybank.utility.Utilities;
 
 public class AdminAtmCardReqPageTest extends BaseTest {
@@ -35,14 +37,14 @@ public class AdminAtmCardReqPageTest extends BaseTest {
 		logger.warn("Browser just launched !");
 	}
 
-	@Test
-	public void adminATMReqPageTest(){
+	@Test(dataProvider = "Dataset", dataProviderClass = AdminData.class)
+	public void adminATMReqPageTest(String emailid, String password){
 		String id = "", actualStatusMSg = "";
 		SideNavBar sideBar = new SideNavBar(driver);
 		AdminAtmCardReqPage adminAtmReqPage = new AdminAtmCardReqPage(driver);
 		SoftAssert soft = new SoftAssert();
 
-		utils.AdminLogin("admin@gmail.com", "admin123");
+		utils.AdminLogin(emailid,password);
 
 		sideBar.clickAdminAtmCardReq();
 

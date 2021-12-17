@@ -8,20 +8,16 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 
-import mybank.pages.UserLoginPage;
 import mybank.pages.RequestAtmPage;
 import mybank.pages.SideNavBar;
 import mybank.utility.BaseTest;
+import mybank.utility.UserData;
 import mybank.utility.Utilities;
 
 public class RequestAtmPageTest extends BaseTest {
@@ -40,12 +36,12 @@ public class RequestAtmPageTest extends BaseTest {
 		logger.warn("Browser just launched !");
 	}
 
-	@Test 
-	public void requestAtmPageAvabilityTest() {
+	@Test(dataProvider = "Dataset", dataProviderClass = UserData.class)
+	public void requestAtmPageAvabilityTest(String emailid, String password) {
 		SideNavBar sideBar = new SideNavBar(driver);
 		RequestAtmPage reqAtmPage = new RequestAtmPage(driver);
 
-		utils.userLogin("abc@gmail.com", "1234");
+		utils.userLogin(emailid,password);
 
 		sideBar.clickRequestAtmBtn();
 

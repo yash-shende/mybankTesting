@@ -17,7 +17,7 @@ import com.aventstack.extentreports.Status;
 
 import mybank.utility.Utilities;
 import mybank.utility.BaseTest;
-import mybank.utility.Data;
+import mybank.utility.AdminData;
 
 public class AdminPageDDTest extends BaseTest {
 
@@ -35,7 +35,7 @@ public class AdminPageDDTest extends BaseTest {
 		logger.warn("Browser just launched !");
 	}
 
-	@Test(dataProvider = "Dataset", dataProviderClass = Data.class)
+	@Test(dataProvider = "Dataset", dataProviderClass = AdminData.class)
 	public void adminLoginTest(String emailid, String password) {
 
 		boolean logined  = utils.AdminLogin(emailid, password); // calling admin login method

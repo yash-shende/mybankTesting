@@ -1,37 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [MultipleSuite]">
-  <test thread-count="5" verbose="0" name="AdminPageDDTest(failed)">
-    <classes>
-      <class name="mybank.testcases.AdminPageDDTest">
-        <methods>
-          <include name="adminLoginTest" invocation-numbers="1"/>
-          <include name="tearDown"/>
-          <include name="temp"/>
-          <include name="beforeSuite"/>
-          <include name="quit"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- mybank.testcases.AdminPageDDTest -->
-    </classes>
-  </test> <!-- AdminPageDDTest(failed) -->
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [MybankTestSuite]">
   <test thread-count="5" verbose="0" name="DDUserLoginPageTest(failed)">
     <classes>
       <class name="mybank.testcases.DDUserLoginPageTest">
         <methods>
-          <include name="userLoginTestSensitive" invocation-numbers="0 1"/>
+          <include name="userLoginTestSensitive" invocation-numbers="0 1 2 4 5 6 7"/>
           <include name="temp"/>
-          <include name="userLoginTestWithcWrongPass" invocation-numbers="0 1"/>
+          <include name="userLoginTestWithcWrongPass" invocation-numbers="0 1 2 3 4 5 6 7"/>
           <include name="tearDown"/>
-          <include name="userLoginTestWithcWrongData" invocation-numbers="0"/>
+          <include name="userLoginTestWithcWrongData" invocation-numbers="0 1 2 3 4 5 6"/>
           <include name="setUp"/>
           <include name="close"/>
-          <include name="userLoginTestWithcWrongEmail" invocation-numbers="0 1"/>
+          <include name="userLoginTestWithcWrongEmail" invocation-numbers="0 1 2 3 4 5 6 7"/>
+          <include name="userLoginTestWithcorrectData" invocation-numbers="2 6 7"/>
           <include name="setup"/>
         </methods>
       </class> <!-- mybank.testcases.DDUserLoginPageTest -->
     </classes>
   </test> <!-- DDUserLoginPageTest(failed) -->
+  <test thread-count="5" verbose="0" name="PersonalDetailsPageTest(failed)">
+    <classes>
+      <class name="mybank.testcases.PersonalDetailsPageTest">
+        <methods>
+          <include name="tear"/>
+          <include name="tearDown"/>
+          <include name="temp"/>
+          <include name="personalDetailsTest"/>
+          <include name="setup"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- mybank.testcases.PersonalDetailsPageTest -->
+    </classes>
+  </test> <!-- PersonalDetailsPageTest(failed) -->
   <test thread-count="5" verbose="0" name="TransactionRecordPageTest(failed)">
     <classes>
       <class name="mybank.testcases.TransactionRecordPageTest">
@@ -61,17 +62,18 @@
       </class> <!-- mybank.testcases.WithdrawMoneyPageTest -->
     </classes>
   </test> <!-- WithdrawMoneyPageTest(failed) -->
-  <test thread-count="5" verbose="0" name="HomePageTest(failed)">
+  <test thread-count="5" verbose="0" name="SignUpPageValidationTest(failed)">
     <classes>
-      <class name="mybank.testcases.HomePageTest">
+      <class name="mybank.testcases.SignUpPageValidationTest">
         <methods>
           <include name="tear"/>
+          <include name="SignUpWithInvalidEmailId"/>
+          <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="contactUsTest"/>
-          <include name="beforeSuite"/>
+          <include name="temp"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- mybank.testcases.HomePageTest -->
+      </class> <!-- mybank.testcases.SignUpPageValidationTest -->
     </classes>
-  </test> <!-- HomePageTest(failed) -->
-</suite> <!-- Failed suite [MultipleSuite] -->
+  </test> <!-- SignUpPageValidationTest(failed) -->
+</suite> <!-- Failed suite [MybankTestSuite] -->

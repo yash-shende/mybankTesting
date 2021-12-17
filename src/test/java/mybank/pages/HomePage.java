@@ -16,8 +16,9 @@ public class HomePage {
 	By login = By.xpath("//div[@id='myNavbar']//li[2]//a[1]");
 	By signUp = By.xpath("//a[@class='fa fa-registered']");
 	
+	public By BranchTitle = By.xpath("//h3[contains(text(),'Kolkata Branch')]");
+	public By bottomContactUsBtn = By.cssSelector("button#bottom-ContactUs-btn");
 	
-	By bottomContactUsBtn = By.xpath("//button[@id='bottom-ContactUs-btn']");
 	
 	
 	public HomePage(WebDriver driver) {
@@ -26,5 +27,10 @@ public class HomePage {
 	
 	public void clickbottomContactUsBtn() {
 		driver.findElement(bottomContactUsBtn).click();
+	}
+	
+	public String  getBranchTitle() {
+		String title = driver.findElement(BranchTitle).getText();
+		return title;
 	}
 }

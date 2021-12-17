@@ -4,16 +4,14 @@ import java.lang.reflect.Method;
 
 import org.testng.annotations.DataProvider;
 
-public class Data {
+public class UserData {
 
 	@DataProvider(name = "Dataset")
 	public Object[][] Logindemo1(Method m) {
 
 		Object[][] testdata = new Object[][] {
 
-				{ "admin@gmail.com", "admin123" },
-				{" "," "}
-
+				{ "abc@gmail.com", "1234" }
 		};
 		return testdata;
 	}

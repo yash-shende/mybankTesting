@@ -1,68 +1,169 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 57, Failures: 12, Errors: 0, Skipped: 0, Time elapsed: 160.55 s <<< FAILURE! - in TestSuite
-adminLoginTest(mybank.testcases.AdminPageDDTest)  Time elapsed: 0.28 s  <<< FAILURE!
+Tests run: 80, Failures: 38, Errors: 0, Skipped: 0, Time elapsed: 178.698 s <<< FAILURE! - in TestSuite
+userLoginTestWithcorrectData(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.437 s  <<< FAILURE!
 java.lang.AssertionError: expected [true] but found [false]
-	at mybank.testcases.AdminPageDDTest.adminLoginTest(AdminPageDDTest.java:48)
+	at mybank.testcases.DDUserLoginPageTest.userLoginTestWithcorrectData(DDUserLoginPageTest.java:57)
 
-userLoginTestWithcWrongData(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.449 s  <<< FAILURE!
+userLoginTestWithcorrectData(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.394 s  <<< FAILURE!
 java.lang.AssertionError: expected [true] but found [false]
-	at mybank.testcases.DDUserLoginPageTest.userLoginTestWithcWrongData(DDUserLoginPageTest.java:72)
+	at mybank.testcases.DDUserLoginPageTest.userLoginTestWithcorrectData(DDUserLoginPageTest.java:57)
 
-userLoginTestWithcWrongEmail(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.368 s  <<< FAILURE!
+userLoginTestWithcorrectData(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.308 s  <<< FAILURE!
 java.lang.AssertionError: expected [true] but found [false]
-	at mybank.testcases.DDUserLoginPageTest.userLoginTestWithcWrongEmail(DDUserLoginPageTest.java:89)
+	at mybank.testcases.DDUserLoginPageTest.userLoginTestWithcorrectData(DDUserLoginPageTest.java:57)
 
-userLoginTestWithcWrongEmail(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.345 s  <<< FAILURE!
+userLoginTestWithcWrongData(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.331 s  <<< FAILURE!
 java.lang.AssertionError: expected [true] but found [false]
-	at mybank.testcases.DDUserLoginPageTest.userLoginTestWithcWrongEmail(DDUserLoginPageTest.java:89)
+	at mybank.testcases.DDUserLoginPageTest.userLoginTestWithcWrongData(DDUserLoginPageTest.java:74)
 
-userLoginTestWithcWrongPass(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.404 s  <<< FAILURE!
+userLoginTestWithcWrongData(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.31 s  <<< FAILURE!
 java.lang.AssertionError: expected [true] but found [false]
-	at mybank.testcases.DDUserLoginPageTest.userLoginTestWithcWrongPass(DDUserLoginPageTest.java:106)
+	at mybank.testcases.DDUserLoginPageTest.userLoginTestWithcWrongData(DDUserLoginPageTest.java:74)
 
-userLoginTestWithcWrongPass(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.356 s  <<< FAILURE!
+userLoginTestWithcWrongData(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.308 s  <<< FAILURE!
 java.lang.AssertionError: expected [true] but found [false]
-	at mybank.testcases.DDUserLoginPageTest.userLoginTestWithcWrongPass(DDUserLoginPageTest.java:106)
+	at mybank.testcases.DDUserLoginPageTest.userLoginTestWithcWrongData(DDUserLoginPageTest.java:74)
 
-userLoginTestSensitive(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.455 s  <<< FAILURE!
+userLoginTestWithcWrongData(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.29 s  <<< FAILURE!
 java.lang.AssertionError: expected [true] but found [false]
-	at mybank.testcases.DDUserLoginPageTest.userLoginTestSensitive(DDUserLoginPageTest.java:122)
+	at mybank.testcases.DDUserLoginPageTest.userLoginTestWithcWrongData(DDUserLoginPageTest.java:74)
 
-userLoginTestSensitive(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.352 s  <<< FAILURE!
+userLoginTestWithcWrongData(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.294 s  <<< FAILURE!
 java.lang.AssertionError: expected [true] but found [false]
-	at mybank.testcases.DDUserLoginPageTest.userLoginTestSensitive(DDUserLoginPageTest.java:122)
+	at mybank.testcases.DDUserLoginPageTest.userLoginTestWithcWrongData(DDUserLoginPageTest.java:74)
 
-TransactionRecordTest(mybank.testcases.TransactionRecordPageTest)  Time elapsed: 3.945 s  <<< FAILURE!
+userLoginTestWithcWrongData(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.22 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at mybank.testcases.DDUserLoginPageTest.userLoginTestWithcWrongData(DDUserLoginPageTest.java:74)
+
+userLoginTestWithcWrongData(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.236 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at mybank.testcases.DDUserLoginPageTest.userLoginTestWithcWrongData(DDUserLoginPageTest.java:74)
+
+userLoginTestWithcWrongEmail(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.306 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at mybank.testcases.DDUserLoginPageTest.userLoginTestWithcWrongEmail(DDUserLoginPageTest.java:91)
+
+userLoginTestWithcWrongEmail(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.264 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at mybank.testcases.DDUserLoginPageTest.userLoginTestWithcWrongEmail(DDUserLoginPageTest.java:91)
+
+userLoginTestWithcWrongEmail(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.3 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at mybank.testcases.DDUserLoginPageTest.userLoginTestWithcWrongEmail(DDUserLoginPageTest.java:91)
+
+userLoginTestWithcWrongEmail(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.294 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at mybank.testcases.DDUserLoginPageTest.userLoginTestWithcWrongEmail(DDUserLoginPageTest.java:91)
+
+userLoginTestWithcWrongEmail(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.558 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at mybank.testcases.DDUserLoginPageTest.userLoginTestWithcWrongEmail(DDUserLoginPageTest.java:91)
+
+userLoginTestWithcWrongEmail(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.451 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at mybank.testcases.DDUserLoginPageTest.userLoginTestWithcWrongEmail(DDUserLoginPageTest.java:91)
+
+userLoginTestWithcWrongEmail(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.4 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at mybank.testcases.DDUserLoginPageTest.userLoginTestWithcWrongEmail(DDUserLoginPageTest.java:91)
+
+userLoginTestWithcWrongEmail(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.253 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at mybank.testcases.DDUserLoginPageTest.userLoginTestWithcWrongEmail(DDUserLoginPageTest.java:91)
+
+userLoginTestWithcWrongPass(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.331 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at mybank.testcases.DDUserLoginPageTest.userLoginTestWithcWrongPass(DDUserLoginPageTest.java:108)
+
+userLoginTestWithcWrongPass(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.258 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at mybank.testcases.DDUserLoginPageTest.userLoginTestWithcWrongPass(DDUserLoginPageTest.java:108)
+
+userLoginTestWithcWrongPass(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.309 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at mybank.testcases.DDUserLoginPageTest.userLoginTestWithcWrongPass(DDUserLoginPageTest.java:108)
+
+userLoginTestWithcWrongPass(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.221 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at mybank.testcases.DDUserLoginPageTest.userLoginTestWithcWrongPass(DDUserLoginPageTest.java:108)
+
+userLoginTestWithcWrongPass(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.295 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at mybank.testcases.DDUserLoginPageTest.userLoginTestWithcWrongPass(DDUserLoginPageTest.java:108)
+
+userLoginTestWithcWrongPass(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.319 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at mybank.testcases.DDUserLoginPageTest.userLoginTestWithcWrongPass(DDUserLoginPageTest.java:108)
+
+userLoginTestWithcWrongPass(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.212 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at mybank.testcases.DDUserLoginPageTest.userLoginTestWithcWrongPass(DDUserLoginPageTest.java:108)
+
+userLoginTestWithcWrongPass(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.27 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at mybank.testcases.DDUserLoginPageTest.userLoginTestWithcWrongPass(DDUserLoginPageTest.java:108)
+
+userLoginTestSensitive(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.245 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at mybank.testcases.DDUserLoginPageTest.userLoginTestSensitive(DDUserLoginPageTest.java:125)
+
+userLoginTestSensitive(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.3 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at mybank.testcases.DDUserLoginPageTest.userLoginTestSensitive(DDUserLoginPageTest.java:125)
+
+userLoginTestSensitive(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.274 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at mybank.testcases.DDUserLoginPageTest.userLoginTestSensitive(DDUserLoginPageTest.java:125)
+
+userLoginTestSensitive(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.274 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at mybank.testcases.DDUserLoginPageTest.userLoginTestSensitive(DDUserLoginPageTest.java:125)
+
+userLoginTestSensitive(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.239 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at mybank.testcases.DDUserLoginPageTest.userLoginTestSensitive(DDUserLoginPageTest.java:125)
+
+userLoginTestSensitive(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.216 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at mybank.testcases.DDUserLoginPageTest.userLoginTestSensitive(DDUserLoginPageTest.java:125)
+
+userLoginTestSensitive(mybank.testcases.DDUserLoginPageTest)  Time elapsed: 0.287 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at mybank.testcases.DDUserLoginPageTest.userLoginTestSensitive(DDUserLoginPageTest.java:125)
+
+personalDetailsTest(mybank.testcases.PersonalDetailsPageTest)  Time elapsed: 1.946 s  <<< FAILURE!
+java.lang.AssertionError: 
+The following asserts failed:
+	Account Number Matches !! expected [987654321312] but found ["987654321312"]
+	at mybank.testcases.PersonalDetailsPageTest.personalDetailsTest(PersonalDetailsPageTest.java:79)
+
+TransactionRecordTest(mybank.testcases.TransactionRecordPageTest)  Time elapsed: 2.092 s  <<< FAILURE!
 java.lang.AssertionError: 
 The following asserts failed:
 	expected [true] but found [false],
-	expected [true] but found [false],
-	expected [true] but found [false],
-	expected [true] but found [false],
-	expected [true] but found [false],
-	expected [true] but found [false]
+	Account Number Matches !! expected [987654321312] but found ["987654321312"]
 	at mybank.testcases.TransactionRecordPageTest.TransactionRecordTest(TransactionRecordPageTest.java:84)
 
-Test3(mybank.testcases.WithdrawMoneyPageTest)  Time elapsed: 0.252 s  <<< FAILURE!
+Test3(mybank.testcases.WithdrawMoneyPageTest)  Time elapsed: 0.275 s  <<< FAILURE!
 java.lang.AssertionError: expected [true] but found [false]
-	at mybank.testcases.WithdrawMoneyPageTest.Test3(WithdrawMoneyPageTest.java:176)
+	at mybank.testcases.WithdrawMoneyPageTest.Test3(WithdrawMoneyPageTest.java:181)
 
-Test4(mybank.testcases.WithdrawMoneyPageTest)  Time elapsed: 0.249 s  <<< FAILURE!
+Test4(mybank.testcases.WithdrawMoneyPageTest)  Time elapsed: 0.266 s  <<< FAILURE!
 java.lang.AssertionError: expected [true] but found [false]
-	at mybank.testcases.WithdrawMoneyPageTest.Test4(WithdrawMoneyPageTest.java:213)
+	at mybank.testcases.WithdrawMoneyPageTest.Test4(WithdrawMoneyPageTest.java:219)
 
-contactUsTest(mybank.testcases.HomePageTest)  Time elapsed: 0.398 s  <<< FAILURE!
-org.openqa.selenium.ElementNotInteractableException: 
-element not interactable
-  (Session info: chrome=96.0.4664.93)
+SignUpWithInvalidEmailId(mybank.testcases.SignUpPageValidationTest)  Time elapsed: 1.25 s  <<< FAILURE!
+org.openqa.selenium.NoAlertPresentException: 
+no such alert
+  (Session info: chrome=96.0.4664.110)
 Build info: version: '4.0.0', revision: '3a21814679'
 System info: host: 'NGL001340', ip: '192.168.0.106', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_92'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3f6d50f4d80f17e1927284849c78c30b, clickElement {id=80f44ef7-5dc1-49ca-ade6-8d578505a35f}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.93, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\YASH_S~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51978}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51978/devtoo..., se:cdpVersion: 96.0.4664.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (3f6d50f4d80f17e1927284849c78c30b)] -> css selector: .col-sm-4:nth-child(1) > h3]
-Session ID: 3f6d50f4d80f17e1927284849c78c30b
-	at mybank.testcases.HomePageTest.contactUsTest(HomePageTest.java:299)
+Command: [d2e32ba35f1edae85abd93238a608952, getAlertText {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.110, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\YASH_S~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:50234}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50234/devtoo..., se:cdpVersion: 96.0.4664.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d2e32ba35f1edae85abd93238a608952
+	at mybank.testcases.SignUpPageValidationTest.SignUpWithInvalidEmailId(SignUpPageValidationTest.java:73)
 
